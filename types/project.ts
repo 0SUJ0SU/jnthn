@@ -13,6 +13,7 @@ interface ProjectFrontmatter {
   featured: boolean;
   excerpt: string;
   description: string;
+  coverImage: string;
 }
 
 interface Project extends ProjectFrontmatter {
