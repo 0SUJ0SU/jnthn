@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Big_Shoulders_Display, Martian_Mono, Cormorant_Garamond } from "next/font/google";
 import GrainOverlay from "@/components/shared/GrainOverlay";
+import SkipLink from "@/components/layout/SkipLink";
+import Nav from "@/components/layout/Nav";
 import "./globals.css";
 
 const bigShoulders = Big_Shoulders_Display({
@@ -41,8 +43,12 @@ export default function RootLayout({
       <body
         className={`${bigShoulders.variable} ${martianMono.variable} ${cormorant.variable} font-mono antialiased`}
       >
+        <SkipLink />
+        <Nav />
         <GrainOverlay />
-        {children}
+        <main id="main-content">
+          {children}
+        </main>
       </body>
     </html>
   );
