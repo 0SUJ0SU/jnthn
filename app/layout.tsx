@@ -3,6 +3,7 @@ import { Big_Shoulders_Display, Martian_Mono, Cormorant_Garamond } from "next/fo
 import GrainOverlay from "@/components/shared/GrainOverlay";
 import SkipLink from "@/components/layout/SkipLink";
 import Nav from "@/components/layout/Nav";
+import Footer from "@/components/layout/Footer";
 import "./globals.css";
 
 const bigShoulders = Big_Shoulders_Display({
@@ -49,6 +50,7 @@ export default function RootLayout({
         <main id="main-content">
           {children}
         </main>
+        <Footer />
       </body>
     </html>
   );
